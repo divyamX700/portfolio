@@ -1,0 +1,442 @@
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Reddit Sans";
+  margin: 0;
+  background: #f0f0f0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #470089, #5151E5);
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.header-left h1 {
+  font-family: Montserrat;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-right nav ul {
+  list-style: none;
+  font-family: Montserrat;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header-right nav ul li {
+  margin-left: 1.5rem;
+  text-align: center;
+}
+
+.header-right nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.header-right nav ul li a:hover {
+  color: #45d6db;
+}
+
+.header-right nav ul li a span{
+  margin-bottom: 6px;
+}
+
+#home {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #f6f6f6;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  padding-bottom: 3.25rem;
+}
+
+#home h1{
+  font-size: 1.8rem;
+}
+
+.intro p{
+  font-size: 1.2rem;
+}
+
+.pfp {
+  border-radius: 0.25rem;
+  width: 9.4rem;
+  height: 9.4rem;
+  object-fit: cover;
+  box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.12) ;
+}
+
+.projects-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 2rem 0;
+  scroll-snap-type: x mandatory;
+  font-family: Reddit Sans;
+}
+
+
+.project-card{
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  flex: 0 0 auto;
+  width: 85vw; 
+  height: 22rem;
+  margin: 0 10vw;  
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.monkey{
+  background-image: url('projbgblur.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.monkey p{
+  background-color: rgba(66, 66, 66, 0.2);
+  color: white;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.monkey:hover{
+  background-size: 105%;
+}
+.project-card h3 {
+  padding: 1rem;
+  font-size: 1.2rem;
+  background: #45d6db;
+  margin: 0; 
+}
+
+.project-card p {
+  padding: 1rem;
+  margin: 0;
+}
+
+.project-card h3{
+  border-radius: 10px;
+}
+
+.project-card a {
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: #5151E5;
+  background: white;
+  transition: background 0.3s;
+  border-radius: 10px;
+}
+
+.project-card a:hover {
+  background: #e0e0e0;
+}
+
+.elephant a{
+  cursor: not-allowed;
+}
+#projects h2{
+  padding-left: 2rem;
+  margin-bottom: 5px;
+}
+
+#about, #contact {
+  padding: 3rem 2rem;
+  background: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+#about a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #45d6db;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form label {
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+#contact-form input, #contact-form textarea {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: "Reddit Sans";
+}
+
+#contact-form button {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+  font-family: "Reddit Sans";
+  background: #45d6db;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  transition: transform 0.2s ease;
+}
+
+#contact-form button:hover {
+  background: #72EDF2;
+  color: black;
+  transform: scale(1.15);
+}
+
+footer {
+  background: #4e4d4d;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+  bottom: 0;
+  font-family: "Montserrat";
+}
+
+
+
+.animated-text {
+  font-size: 2.75rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: "Montserrat";
+  background: linear-gradient(to bottom right, #5780e9, #e56b7d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.iama{
+  margin-top: 1.25rem;
+  font-family: "Montserrat";
+  font-size: 1.75rem;
+  margin-bottom: 5px;
+  background: linear-gradient(to bottom right, #5780e9, #e56b7d);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.about-heading{
+  padding-left: 2rem;
+  font-weight: 600;
+}
+.about-page{
+  margin-bottom: 3rem;
+}
+.about-page p{
+  padding-left: 2rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.minigame{
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  height: 250px;
+  background-color: #898f92;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  padding-left: 35px;
+  padding-right: 35px;
+  text-align: center;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.move{
+  width: 9rem;
+  border-radius: 100%;
+  border: none;
+  background-color: white;
+  padding: 0;
+}
+
+.move img{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.selected{
+  margin-top: 3rem;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+.result{
+  margin-top: 0.8rem;
+  font-family: "Happy Monkey";
+  text-transform: uppercase;
+  color: #45d6db;
+  font-weight: bold;
+}
+
+.selected, .result{
+  font-size: 1.5rem;
+}
+
+@media (max-width: 800px) {
+  .header-right nav ul {
+      flex-direction: column;
+      align-items: flex-end;
+  }
+
+  .header-right nav ul li {
+    margin: 0.5rem;
+}
+
+.move{
+  margin-right: 5px;
+  width: 3rem;
+}
+
+}
+
+@media (max-width: 1200px){
+  .selected, .result{
+    font-size: 1.2rem !important;
+  }
+}
+
+@media (max-width: 1400px){
+  .move{
+    margin-right: 5px;
+    width: 6rem;
+  }
+}
+
+@media (max-width: 800px){
+  
+}
+
+.btn{
+  position: fixed;
+  top: 6rem;
+  right: 1rem;
+  border: solid;
+  border-color: black;
+  border-width: 2px;
+  border-radius: 3px;
+  align-items: center;
+  text-align: center;
+}
+
+.bi{
+  margin-right: 6px;
+  height: 22px;
+  width: 22px;
+}
+
+header.dark-mode {
+  background: linear-gradient(135deg, #292929d7, #414141e2);
+  color: #c5c5c5;
+}
+
+.header-right nav ul li a.dark-mode {
+  color: #c5c5c5;
+}
+
+.header-right nav ul li a.dark-mode:hover {
+  color: #45d6db;
+}
+
+#home.dark-mode {
+  background: #262626;
+  color: #c5c5c5;
+}
+
+.pfp.dark-mode {
+  box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.12);
+}
+#projects h2.dark-mode{
+  color: #c5c5c5
+}
+
+.project-card a.dark-mode{
+  background-color:#e0e0e0 ;
+}
+
+.project-card a.dark-mode:hover {
+  background: #d8d7d7 ;
+}
+
+body.dark-mode{
+  background-color: #222222;
+}
+
+#about.dark-mode, #contact.dark-mode {
+  background: #262626;
+  color: #c5c5c5;
+  border-bottom: 2px solid #323232;
+}
+
+#name.dark-mode, #email.dark-mode, #message.dark-mode{
+  background-color: #d8d7d7;
+}
+
+#contact-form button.dark-mode {
+  background: #444444;
+  color: white;
+}
+
+#contact-form button.dark-mode:hover {
+  background: #6f6f6f8d;
+}
+
+footer.dark-mode {
+  background: #6f6f6f8d;
+  color: #191919;
+}
+
+.minigame.dark-mode{
+  background-color: #898f92;
+}
+
+.about-page.dark-mode{
+  color: #c5c5c5;
+}
+
+.minigame-heading.dark-mode{
+  color : #c5c5c5;
+}
+
+.bi.dark-mode{
+  fill: #191919;
+}
